@@ -7,7 +7,7 @@ import random
 from io import StringIO
 import sys
 
-bot = commands.Bot(command_prefix=".")
+bot = commands.Bot(command_prefix=".", intents=intents)
 
 
 def pront(lvl, content):
