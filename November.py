@@ -1,6 +1,5 @@
 from datetime import datetime
 import discord
-import Novkey as key
 from time import sleep
 from discord.ext import commands
 from asyncio.tasks import sleep
@@ -108,4 +107,4 @@ async def _exec(ctx, *, comand=None):
 #    else:#sends no perms if has none
 #        await send(ctx, title='You Do Not Have Perms')
 
-bot.run(key.token)
+bot.run("token here or reference to it here")
