@@ -108,4 +108,9 @@ async def _exec(ctx, *, comand=None):
 #    else:#sends no perms if has none
 #        await send(ctx, title='You Do Not Have Perms')
 
+@bot.command()
+async def ping(ctx):
+    """PING POMG"""
+    await send(ctx, title='Pong')
+
 bot.run("token here or reference to it here")
