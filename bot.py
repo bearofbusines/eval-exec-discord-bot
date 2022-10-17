@@ -7,6 +7,7 @@ import random
 from io import StringIO
 import sys
 
+intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=".", intents=intents)
 
 
@@ -42,7 +43,7 @@ async def getEmbed(ctx, title='', content='', footer='', color=''):
         color=color
     )
     embed.set_author(name=ctx.author.display_name,
-                     icon_url=ctx.author.avatar_url)
+                     icon_url=ctx.author.display_avatar.url)
     # TODO Hide the footer until i find out what to do with it
     # embed.set_footer(footer=footer)
     return embed
@@ -113,4 +114,4 @@ async def ping(ctx):
     """PING POMG"""
     await send(ctx, title='Pong')
 
-bot.run("token here or reference to it here")
+bot.run("token here or reference to it here")#make sure you set your intents in the portal and here on line 10
