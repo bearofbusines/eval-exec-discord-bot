@@ -56,6 +56,7 @@ async def send(ctx, title='', content='', footer='', color=''):
 
 
 @bot.command(aliases=['eval'])
+@commands.is_owner()
 async def _eval(ctx, *, comand=None):
     # if (ctx.author.id == {idhere}):#for when you are not owner 369999044023549962
     #pront("LOG", comand)
