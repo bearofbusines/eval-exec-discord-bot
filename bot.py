@@ -57,7 +57,7 @@ async def send(ctx, title='', content='', footer='', color=''):
 @bot.command(aliases=['eval'])
 @commands.is_owner()
 async def _eval(ctx, *, comand=None):
-    # if (ctx.author.id == {idhere}):#for when you are not owner 369999044023549962
+    # if (ctx.author.id == {idhere}):#for when you are not owner but want to make it so only you can use it
     #pront("LOG", comand)
     old_stdout = sys.stdout
     sys.stdout = mystdout = StringIO()
@@ -79,7 +79,7 @@ async def _eval(ctx, *, comand=None):
 @bot.command(aliases=['exec'])
 @commands.is_owner()
 async def _exec(ctx, *, comand=None):
-    # if (ctx.author.id == {idhere}):#for when you are not owner 369999044023549962
+    # if (ctx.author.id == {idhere}):#for when you are not owner but want to make it so only you can use it
     #pront("LOG", comand)
     old_stdout = sys.stdout
     sys.stdout = mystdout = StringIO()
