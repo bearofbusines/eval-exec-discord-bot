@@ -9,7 +9,7 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=".", intents=intents)
 
 
-def pront(lvl, content):
+def pront(content, lvl="LOG"):
     colors = {
         "LOG": "",
         "OKBLUE": "\033[94m",
