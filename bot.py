@@ -89,13 +89,9 @@ async def _exec(ctx, *, comand=None):
     #pront("LOG", comand)
     old_stdout = sys.stdout
     sys.stdout = mystdout = StringIO()
-    if (comand[2] == '`'):
-        comand = comand.split('\n')
-        comand = comand[1:-1]
-        temp = ""
-        for i in comand:
-            temp += i + "\n"
-        comand = temp
+    comand.rstrip("`")
+    comand.lstrip("`")
+    comand.lstrip("python")
     # pront(comand)
 
     try:
