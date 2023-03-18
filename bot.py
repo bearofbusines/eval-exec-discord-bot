@@ -1,8 +1,6 @@
 from datetime import datetime
 import discord
-from time import sleep
 from discord.ext import commands
-from asyncio.tasks import sleep
 import random
 from io import StringIO
 import sys
@@ -100,10 +98,5 @@ async def _exec(ctx, *, comand=None):
     await send(ctx, title='Command Sent:', content='in:\n```' + comand + '```' + '\n\nout:```ansi\n' + str(mystdout.getvalue()) + '```')
 #    else:#sends no perms if has none
 #        await send(ctx, title='You Do Not Have Perms')
-
-@bot.command()
-async def ping(ctx):
-    """PING POMG"""
-    await send(ctx, title='Pong')
 
 bot.run("token here or reference to it here")#make sure you set your intents in the portal and here on line 10
